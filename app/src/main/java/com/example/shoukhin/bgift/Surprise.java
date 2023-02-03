@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,11 +35,19 @@ public class Surprise extends AppCompatActivity {
                     }
                 });
 
-        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.unnatibd);
 
         VideoView videoView = findViewById(R.id.videoView1);
         videoView.setVideoURI(uri);
+
         videoView.requestFocus();
+
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(videoView);
+        mediaController.setMediaPlayer(videoView);
+        videoView.setMediaController(mediaController);
+
+
         videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {

@@ -3,10 +3,10 @@ package com.example.shoukhin.bgift;
 import java.util.Calendar;
 
 final class Constants {
-    private static final int TARGET_MONTH = 7; // 0 based index
-    private static final int TARGET_DATE = 26;
-    private static final int TARGET_HOUR = 13; // 24 Hour Format
-    private static final int TARGET_MINUTE = 48;
+    private static final int TARGET_MONTH = 11; // 0 based index
+    private static final int TARGET_DATE = 29;
+    private static final int TARGET_HOUR = 1; // 24 Hour Format
+    private static final int TARGET_MINUTE = 0;
     private static final int TARGET_SECOND = 0;
 
     public static final String CHANNEL_ID = "100";
